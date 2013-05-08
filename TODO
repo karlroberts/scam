@@ -1,0 +1,40 @@
+=== TODO
+
+setup sbt build... Scala 10 scalaz 7 specs2 scalacheck java 7??
+
+implement a very small Free language to help me get how it works
+
+implement an interpretor for the free Lang that edits a byte array
+
+think about project structure and supporting tools and layout
+
+create case classes for Java class file parts
+
+create a Reader for class Class => AST that places values in AST(or something else with more knwledge, does Free allow for this?)
+create a Writer from AST => Class  is this the forgetful functor to the Free??
+
+bash out some example usages of scam lang, should be a nice DSL for classworking, simple but not too simple
+
+really start to think about the lang, primatives, combinators semantics etc
+
+really understand how the JVM verifier works!
+
+create Free lang verbs for scam lang
+
+start on interpretor - first one, change field value (but not type)
+second one add new field
+remove field (must remove refs to it too, does that mean make methods return null
+   or better can I make it a compile time error in SCAM ie the combinator types will enforce correct "operations"?
+   will I need Macros for this??
+change field type (needs to find all refs to it and fix them up too)
+etc
+
+create other interpretors to do :-
+   other versions of JVM bytecode (maybe do this last?? but think about it up front)
+   simple scan of class and spit out bytecode
+   simple scan of class with a filter to just show bytecode for parts of interest
+   whatever else seems awesome.
+
+performance test against other bytecoders
+
+fun and profit?
